@@ -48,7 +48,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">sept 13, 2024 06:11:13 p. m.</span>
+                    <span class="badge badge-primary">sept 16, 2024 05:07:31 p.Â m.</span>
                 </a>
             </li>
         </ul>
@@ -149,8 +149,8 @@
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">Clockify API</p>
-							<p class="duration text-sm">0h 0m 16s+556ms</p>
-							<span class="datetime">18:11:13 p. m.</span>
+							<p class="duration text-sm">0h 0m 13s+845ms</p>
+							<span class="datetime">17:07:32 p.Â m.</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
@@ -158,9 +158,9 @@
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
 									<h5 class="test-status text-fail">Clockify API</h5>
-									<span class='badge badge-success'>09.13.2024 18:11:13</span>
-									<span class='badge badge-danger'>09.13.2024 18:11:30</span>
-									<span class='badge badge-default'>0h 0m 16s+556ms</span>
+									<span class='badge badge-success'>09.16.2024 17:07:32</span>
+									<span class='badge badge-danger'>09.16.2024 17:07:46</span>
+									<span class='badge badge-default'>0h 0m 13s+845ms</span>
 								</div>
 								<div class="m-t-15">
 			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @Clockify</span>
@@ -582,8 +582,8 @@
 		<div class="card-header" role="tab">
 			<div class="card-title pl-3">
 				<div class="node">Filter projects by name</div>
-				<div class="status-avatar float-left pass-bg">
-					<i class="fa fa-check text-white"></i>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
 				</div>
 			</div>
 		</div>
@@ -628,7 +628,7 @@
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>And endpoint v1/workspaces/{{idWorkspace}}/projects?name=Software</span>
+								<span>And endpoint v1/workspaces/{{idWorkspace}}/projects?name=Project</span>
 							</div>
 				<div class="details"></div>
 							<div class="d-flex align-items-center justify-content-start when" title="StepsInCommon.setHttpMethodAndExecute(String)">
@@ -645,6 +645,23 @@
 								<span>Then the status code should be 200</span>
 							</div>
 				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="ClockifySteps.containName(String)">
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
+								</span>
+								<span>And the response should contain projects with "Project" in the name</span>
+							</div>
+				<div class="details"><textarea readonly class='code-block'>
+  java.lang.AssertionError: The value TESTproject doesn't match with Project expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at io.lippia.api.lowcode.Engine.responseMatcher(Engine.java:136)
+	at io.lippia.api.lowcode.steps.StepsInCommon.response(StepsInCommon.java:108)
+	at ar.steps.ClockifySteps.containName(ClockifySteps.java:45)
+	at âœ½.the response should contain projects with "Project" in the name(file:src/test/resources/features/Clockify.feature:59)
+
+</textarea></div>
 					</div>
 				</div>
 	</div>
@@ -1342,7 +1359,7 @@
 	at org.testng.Assert.fail(Assert.java:96)
 	at io.lippia.api.lowcode.Engine.validates(Engine.java:121)
 	at io.lippia.api.lowcode.steps.StepsInCommon.status(StepsInCommon.java:96)
-	at ?.the status code should be 404(file:src/test/resources/features/Clockify.feature:136)
+	at âœ½.the status code should be 404(file:src/test/resources/features/Clockify.feature:136)
 
 </textarea></div>
 					</div>
@@ -1419,7 +1436,7 @@
 	at org.testng.Assert.fail(Assert.java:96)
 	at io.lippia.api.lowcode.Engine.validates(Engine.java:121)
 	at io.lippia.api.lowcode.steps.StepsInCommon.status(StepsInCommon.java:96)
-	at ?.the status code should be 400(file:src/test/resources/features/Clockify.feature:143)
+	at âœ½.the status code should be 400(file:src/test/resources/features/Clockify.feature:143)
 
 </textarea></div>
 					</div>
@@ -1471,8 +1488,8 @@
 							<p class="name">@Clockify</p>
 							<p class="duration text-sm">18 tests</p>
 							<span class="datetime">
-							<span class='badge badge-success'>15</span>
-							<span class='badge badge-danger'>2</span>
+							<span class='badge badge-success'>14</span>
+							<span class='badge badge-danger'>3</span>
 							
 							
 							</span>
@@ -1481,8 +1498,8 @@
 					<div class="test-contents d-none">
 						<div class="info">
 							<h4>@Clockify</h4>
-							<span status="pass" class='badge badge-success'>15 passed</span>
-							<span status="fail" class='badge badge-danger'>2 failed</span>
+							<span status="pass" class='badge badge-success'>14 passed</span>
+							<span status="fail" class='badge badge-danger'>3 failed</span>
 							
 							
 						</div>
@@ -1501,7 +1518,7 @@
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:13 p. m.</td>
+									<td>17:07:32 p.Â m.</td>
 									<td class='linked' test-id='1'>
 										Clockify API
 									</td>
@@ -1512,7 +1529,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:13 p. m.</td>
+									<td>17:07:32 p.Â m.</td>
 									<td class='linked' test-id='2'>
 										Get all workspaces
 										<div class="">
@@ -1526,7 +1543,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:16 p. m.</td>
+									<td>17:07:34 p.Â m.</td>
 									<td class='linked' test-id='13'>
 										Get all projects
 										<div class="">
@@ -1540,7 +1557,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:16 p. m.</td>
+									<td>17:07:35 p.Â m.</td>
 									<td class='linked' test-id='25'>
 										Get project
 										<div class="">
@@ -1554,7 +1571,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:18 p. m.</td>
+									<td>17:07:36 p.Â m.</td>
 									<td class='linked' test-id='37'>
 										Add project
 										<div class="">
@@ -1568,7 +1585,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:19 p. m.</td>
+									<td>17:07:37 p.Â m.</td>
 									<td class='linked' test-id='51'>
 										Edit name project
 										<div class="">
@@ -1576,13 +1593,13 @@
 										</div>
 									</td>
 								</tr>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:21 p. m.</td>
+									<td>17:07:38 p.Â m.</td>
 									<td class='linked' test-id='65'>
 										Filter projects by name
 										<div class="">
@@ -1596,8 +1613,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:22 p. m.</td>
-									<td class='linked' test-id='76'>
+									<td>17:07:39 p.Â m.</td>
+									<td class='linked' test-id='77'>
 										Strict search by project name
 										<div class="">
 											<span class="badge badge-default">Clockify API.Strict search by project name</span>
@@ -1610,8 +1627,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:22 p. m.</td>
-									<td class='linked' test-id='86'>
+									<td>17:07:39 p.Â m.</td>
+									<td class='linked' test-id='87'>
 										Filter projects by archived status
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by archived status</span>
@@ -1624,8 +1641,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:23 p. m.</td>
-									<td class='linked' test-id='97'>
+									<td>17:07:40 p.Â m.</td>
+									<td class='linked' test-id='98'>
 										Filter projects by specific clients
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by specific clients</span>
@@ -1638,8 +1655,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:24 p. m.</td>
-									<td class='linked' test-id='108'>
+									<td>17:07:41 p.Â m.</td>
+									<td class='linked' test-id='109'>
 										Filter projects by specific users
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by specific users</span>
@@ -1652,8 +1669,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:24 p. m.</td>
-									<td class='linked' test-id='119'>
+									<td>17:07:41 p.Â m.</td>
+									<td class='linked' test-id='120'>
 										Filter projects by client status
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by client status</span>
@@ -1666,8 +1683,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:25 p. m.</td>
-									<td class='linked' test-id='130'>
+									<td>17:07:42 p.Â m.</td>
+									<td class='linked' test-id='131'>
 										Sort projects by name in ascending order
 										<div class="">
 											<span class="badge badge-default">Clockify API.Sort projects by name in ascending order</span>
@@ -1680,8 +1697,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:26 p. m.</td>
-									<td class='linked' test-id='141'>
+									<td>17:07:43 p.Â m.</td>
+									<td class='linked' test-id='142'>
 										Test pagination with page number and page size
 										<div class="">
 											<span class="badge badge-default">Clockify API.Test pagination with page number and page size</span>
@@ -1694,8 +1711,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:27 p. m.</td>
-									<td class='linked' test-id='152'>
+									<td>17:07:43 p.Â m.</td>
+									<td class='linked' test-id='153'>
 										Get public projects
 										<div class="">
 											<span class="badge badge-default">Clockify API.Get public projects</span>
@@ -1708,8 +1725,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:28 p. m.</td>
-									<td class='linked' test-id='163'>
+									<td>17:07:44 p.Â m.</td>
+									<td class='linked' test-id='164'>
 										Unauthorized access to projects
 										<div class="">
 											<span class="badge badge-default">Clockify API.Unauthorized access to projects</span>
@@ -1722,8 +1739,8 @@
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:28 p. m.</td>
-									<td class='linked' test-id='174'>
+									<td>17:07:44 p.Â m.</td>
+									<td class='linked' test-id='175'>
 										Project not found
 										<div class="">
 											<span class="badge badge-default">Clockify API.Project not found</span>
@@ -1736,8 +1753,8 @@
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:29 p. m.</td>
-									<td class='linked' test-id='185'>
+									<td>17:07:45 p.Â m.</td>
+									<td class='linked' test-id='186'>
 										Bad request due to invalid parameters
 										<div class="">
 											<span class="badge badge-default">Clockify API.Bad request due to invalid parameters</span>
@@ -1784,7 +1801,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:13 p. m.</td>
+									<td>17:07:32 p.Â m.</td>
 									<td class='linked' test-id='2'>
 										Get all workspaces
 										<div class="">
@@ -1832,7 +1849,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:16 p. m.</td>
+									<td>17:07:34 p.Â m.</td>
 									<td class='linked' test-id='13'>
 										Get all projects
 										<div class="">
@@ -1880,7 +1897,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:16 p. m.</td>
+									<td>17:07:35 p.Â m.</td>
 									<td class='linked' test-id='25'>
 										Get project
 										<div class="">
@@ -1928,7 +1945,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:18 p. m.</td>
+									<td>17:07:36 p.Â m.</td>
 									<td class='linked' test-id='37'>
 										Add project
 										<div class="">
@@ -1976,7 +1993,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:19 p. m.</td>
+									<td>17:07:37 p.Â m.</td>
 									<td class='linked' test-id='51'>
 										Edit name project
 										<div class="">
@@ -1994,8 +2011,8 @@
 							<p class="name">@FilterProjectsByName</p>
 							<p class="duration text-sm">1 tests</p>
 							<span class="datetime">
-							<span class='badge badge-success'>1</span>
 							
+							<span class='badge badge-danger'>1</span>
 							
 							
 							</span>
@@ -2004,8 +2021,8 @@
 					<div class="test-contents d-none">
 						<div class="info">
 							<h4>@FilterProjectsByName</h4>
-							<span status="pass" class='badge badge-success'>1 passed</span>
 							
+							<span status="fail" class='badge badge-danger'>1 failed</span>
 							
 							
 						</div>
@@ -2018,13 +2035,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:21 p. m.</td>
+									<td>17:07:38 p.Â m.</td>
 									<td class='linked' test-id='65'>
 										Filter projects by name
 										<div class="">
@@ -2072,8 +2089,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:22 p. m.</td>
-									<td class='linked' test-id='76'>
+									<td>17:07:39 p.Â m.</td>
+									<td class='linked' test-id='77'>
 										Strict search by project name
 										<div class="">
 											<span class="badge badge-default">Clockify API.Strict search by project name</span>
@@ -2120,8 +2137,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:22 p. m.</td>
-									<td class='linked' test-id='86'>
+									<td>17:07:39 p.Â m.</td>
+									<td class='linked' test-id='87'>
 										Filter projects by archived status
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by archived status</span>
@@ -2168,8 +2185,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:23 p. m.</td>
-									<td class='linked' test-id='97'>
+									<td>17:07:40 p.Â m.</td>
+									<td class='linked' test-id='98'>
 										Filter projects by specific clients
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by specific clients</span>
@@ -2216,8 +2233,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:24 p. m.</td>
-									<td class='linked' test-id='108'>
+									<td>17:07:41 p.Â m.</td>
+									<td class='linked' test-id='109'>
 										Filter projects by specific users
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by specific users</span>
@@ -2264,8 +2281,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:24 p. m.</td>
-									<td class='linked' test-id='119'>
+									<td>17:07:41 p.Â m.</td>
+									<td class='linked' test-id='120'>
 										Filter projects by client status
 										<div class="">
 											<span class="badge badge-default">Clockify API.Filter projects by client status</span>
@@ -2312,8 +2329,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:25 p. m.</td>
-									<td class='linked' test-id='130'>
+									<td>17:07:42 p.Â m.</td>
+									<td class='linked' test-id='131'>
 										Sort projects by name in ascending order
 										<div class="">
 											<span class="badge badge-default">Clockify API.Sort projects by name in ascending order</span>
@@ -2360,8 +2377,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:26 p. m.</td>
-									<td class='linked' test-id='141'>
+									<td>17:07:43 p.Â m.</td>
+									<td class='linked' test-id='142'>
 										Test pagination with page number and page size
 										<div class="">
 											<span class="badge badge-default">Clockify API.Test pagination with page number and page size</span>
@@ -2408,8 +2425,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:27 p. m.</td>
-									<td class='linked' test-id='152'>
+									<td>17:07:43 p.Â m.</td>
+									<td class='linked' test-id='153'>
 										Get public projects
 										<div class="">
 											<span class="badge badge-default">Clockify API.Get public projects</span>
@@ -2456,8 +2473,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>18:11:28 p. m.</td>
-									<td class='linked' test-id='163'>
+									<td>17:07:44 p.Â m.</td>
+									<td class='linked' test-id='164'>
 										Unauthorized access to projects
 										<div class="">
 											<span class="badge badge-default">Clockify API.Unauthorized access to projects</span>
@@ -2504,8 +2521,8 @@
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:28 p. m.</td>
-									<td class='linked' test-id='174'>
+									<td>17:07:44 p.Â m.</td>
+									<td class='linked' test-id='175'>
 										Project not found
 										<div class="">
 											<span class="badge badge-default">Clockify API.Project not found</span>
@@ -2552,8 +2569,8 @@
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>18:11:29 p. m.</td>
-									<td class='linked' test-id='185'>
+									<td>17:07:45 p.Â m.</td>
+									<td class='linked' test-id='186'>
 										Bad request due to invalid parameters
 										<div class="">
 											<span class="badge badge-default">Clockify API.Bad request due to invalid parameters</span>
@@ -2618,9 +2635,9 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='88,235%'><b>15</b> scenarios passed</small></div>
+					<div><small data-tooltip='82,353%'><b>14</b> scenarios passed</small></div>
 					<div>
-						<small data-tooltip='11,765%'><b>2</b> scenarios failed, 
+						<small data-tooltip='17,647%'><b>3</b> scenarios failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -2638,9 +2655,9 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='98,601%'><b>141</b> steps passed</small></div>
+					<div><small data-tooltip='97,917%'><b>141</b> steps passed</small></div>
 					<div>
-						<small data-tooltip='1,399%'><b>2</b> steps failed, 
+						<small data-tooltip='2,083%'><b>3</b> steps failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -2677,7 +2694,7 @@
 							<h2 class="font-size-28 font-weight-light mt-3">17</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>88,24%</span>
+							<span>82,35%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -2693,7 +2710,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">sept 13, 2024 06:11:13 p. m.</h4>
+							<h4 class="font-weight-light mt-4">sept 16, 2024 05:07:31 p.Â m.</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -2709,7 +2726,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 0m 17s+128ms</h4>
+							<h4 class="font-weight-light mt-4">0h 0m 14s+443ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -2755,12 +2772,12 @@
 						<tbody>
 							<tr>
 								<td>@Clockify</td>
-								<td>15</td>
-								<td>2</td>
+								<td>14</td>
+								<td>3</td>
 								<td>0</td>
 								<td>0</td>
 								<td>
-									83,333%
+									77,778%
 								</td>
 							</tr>
 							<tr>
@@ -2815,12 +2832,12 @@
 							</tr>
 							<tr>
 								<td>@FilterProjectsByName</td>
+								<td>0</td>
 								<td>1</td>
 								<td>0</td>
 								<td>0</td>
-								<td>0</td>
 								<td>
-									100%
+									0%
 								</td>
 							</tr>
 							<tr>
@@ -2951,28 +2968,28 @@
 		skipParent: 0,
 		exceptionsParent: 1,
 		childCount: 17,
-		passChild: 15,
-		failChild: 2,
+		passChild: 14,
+		failChild: 3,
 		fatalChild: 0,
 		errorChild: 0,
 		warningChild: 0,
 		skipChild: 0,
 		infoChild: 0,
 		debugChild: 0,
-		exceptionsChild: 2,
-		grandChildCount: 143,
+		exceptionsChild: 3,
+		grandChildCount: 144,
 		passGrandChild: 141,
-		failGrandChild: 2,
+		failGrandChild: 3,
 		fatalGrandChild: 0,
 		errorGrandChild: 0,
 		warningGrandChild: 0,
 		skipGrandChild: 0,
 		infoGrandChild: 0,
 		debugGrandChild: 0,
-		exceptionsGrandChild: 2,
-		eventsCount: 143,
+		exceptionsGrandChild: 3,
+		eventsCount: 144,
 		passEvents: 141,
-		failEvents: 2,
+		failEvents: 3,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
@@ -2984,7 +3001,7 @@
 </script>
 <script>
 	var timeline = {
-	        "Clockify API":16.556
+	        "Clockify API":13.845
 	};
 </script>
                 </div>

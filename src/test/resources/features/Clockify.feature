@@ -53,10 +53,10 @@ Feature: Clockify API
   @FilterProjectsByName
   Scenario: Filter projects by name
     Given call Clockify.feature@GetAllWorkspaces
-    And endpoint v1/workspaces/{{idWorkspace}}/projects?name=Software
+    And endpoint v1/workspaces/{{idWorkspace}}/projects?name=Project
     When execute method GET
     Then the status code should be 200
-    #And the response should contain projects with "Software Development" in the name
+    And the response should contain projects with "Project" in the name
 
   @StrictSearchByProjectName
   Scenario: Strict search by project name
